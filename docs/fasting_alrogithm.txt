@@ -1,0 +1,149 @@
+fastings = [ aug1_14, christmas, easter, apostole ]
+celebration =  [ afterchristmas ...]
+
+types = [ despotikes , theomitorikes]
+
+despotikes = [ 
+    6aug:
+        oil = true
+        fish = true
+        dairy = false
+        meat =  false
+    ...
+    2Feb:
+        oil = true
+        fish = true
+        dairy = false
+        meat =  false
+        
+]
+
+theomitoriki = [ 
+    2Feb:
+        oil = true
+        fish = true
+        dairy = false
+        meat =  false
+]
+
+aug1_14= {
+        weekdays:
+            oil = false
+            fish = false
+            dairy = false
+            meat =  false
+        weekend:
+            oil = true
+            fish = false
+            dairy = false
+            meat =  false
+}
+
+christmas = {
+    15/11-20/11:
+        weekdays:
+            oil = false
+            fish = false
+            dairy = false
+            meat =  false
+        weekend:
+            oil = true
+            fish = false
+            dairy = false
+            meat =  false
+    21/11:
+        oil = true
+        fish = fish
+        dairy = false
+        meat =  false
+    22/11-12/12:
+        weekdays:
+            oil = false
+            fish = false
+            dairy = false
+            meat =  false
+        weekend:
+            oil = true
+            fish = false
+            dairy = false
+            meat =  false
+    13/12-24/12:
+        weekdays:
+            oil = false
+            fish = false
+            dairy = false
+            meat =  false
+        weekend:
+            oil = true
+            fish = false
+            dairy = false
+            meat =  false
+}
+
+
+easter MM/DD = date of easter ... {
+    25 Mar:
+        oil = true
+        fish = true
+        dairy = false
+        meat =  false
+}
+
+apostole = {
+
+}
+    
+    
+
+oil = true
+fish = true
+dairy = true
+meat =  true
+
+
+if wednesday or friday:
+    oil = false
+    fish = false
+    dairy = false
+    meat =  false
+
+
+if fasting day:
+    oil = as defined by the specific fasting
+    fish = as defined by the specific fasting
+    dairy = as defined by the specific fasting
+    meat = as defined by the specific fasting
+    
+   
+if saint allows wine and oil == false:
+    oil = true
+   
+
+if despotiki:
+
+
+if theomitoriki:
+
+
+if celebration:
+    ...
+   
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
