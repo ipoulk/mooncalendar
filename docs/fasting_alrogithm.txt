@@ -261,30 +261,56 @@ if wednesday or friday:
 	wineoil = false
 
 if in fasting:
-	if great_lent,dekapentaugoustou1_8_14_8:
+	if great_lent:
 		follow rules but first check
 
 		{if despotiki:
 		follow rules but first check if
-	if despotikes_katalusis_ixthios:
+		if despotikes_katalusis_ixthios:
 
-	if despotikes_alado:
+		if despotikes_alado:
 
 
 		if theomitoriki:
 		follow rules but first check if
-	if theomitorikes_katalisis_ixthios:
+		if theomitorikes_katalisis_ixthios:
 
-	if theomitorikes_katalisi_elaiou:
+		if theomitorikes_katalisi_elaiou:
 
 		
 		If prodromou:
 		follow rules but first check if
-	if prodromou_katalisis_ixthios:
+		if prodromou_katalisis_ixthios:
 
-	if prodromou_katalisis_elaiou:
+		if prodromou_katalisis_elaiou:
+	
+		if prodromou_alado:
+	
+		if saint special_notes == true:
+   		 Follow saint entry in db special_note}
+	
+		if dekapentaugoustou1_8_14_8:
+				{if despotiki:
+		follow rules but first check if
+		if despotikes_katalusis_ixthios:
 
-	if prodromou_alado:
+		if despotikes_alado:
+
+
+		if theomitoriki:
+		follow rules but first check if
+		if theomitorikes_katalisis_ixthios:
+
+		if theomitorikes_katalisi_elaiou:
+
+		
+		If prodromou:
+		follow rules but first check if
+		if prodromou_katalisis_ixthios:
+
+		if prodromou_katalisis_elaiou:
+
+		if prodromou_alado:
 	
 		if saint special_notes == true:
    		 Follow saint entry in db special_note}
