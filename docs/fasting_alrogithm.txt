@@ -1,132 +1,321 @@
-fastings = [ aug1_14, christmas, easter, apostole ]
-celebration =  [ afterchristmas ...]
+1. Determine fasting_dates and celebration_dates for given year as well as day of week.
 
-types = [ despotikes , theomitorikes]
+fasting = [ great_lent,dekapentaugoustou1_8_14_8, christmaslent15_11_24_12, apostel, megalievdomada]
 
-despotikes = [ 
-    6aug:
-        oil = true
-        fish = true
-        dairy = false
-        meat =  false
-    ...
-    2Feb:
-        oil = true
-        fish = true
-        dairy = false
-        meat =  false
+
+celebration =  [ christmastide,renewalweek,telwnoufarisaiou,tyrinis ]
+
+statheres=[wednesday,friday]
+
+types = [despotikes, theomitorikes, prodromou]
+
+despotikes_katalusis_panta=[peritomikuriou1_1,theofania6_1,anastasis,pentikostis_eastersunday+49,agioupneumatos_eastersunday+50,gennisisxristou25_12,analipseos_eastersunday+39] 
+despotikes_katalusis_ixthios = [ypapanti2_2,kuriakivaiwn(proairetika)eastersunday-7days,metamorfosi6_8,]
+despotikes_alado = [megaliparaskeui_eastersunday-2days,timioustaurou14_9]
+
+
+theomitorikes_katalusis_panta=[zwodoxoupigis_eastersunday+5days,sinaxistheotokou26_12]
+theomitorikes_katalisis_ixthios=[euaggelismos25_3,koimisis15_8,gennisitheotokou8_9,eisodia21_11]
+theomitorikes_katalisi_elaiou=[katathesitimiaszwnhs31_8,katathesistimiasesthitos2_7]
+
+
+prodromou_katalisis_ixthios = [genethlia24_6,sinaxis7_1]
+prodromou_katalisis_elaiou = [euresistimiaskefalis24_2,tritieuresiskefalis25_5,sillipsis23_9]
+prodromou_alado = [apotomi31_8]
+
+mesopentikostis?
+apodosispasxa?
+
+despotikes_katalusis_panta= [ 
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true]
         
-]
+despotikes_katalusis_ixthios= [ 
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true]
+	
+despotikes_alado=[
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false]
 
-theomitoriki = [ 
-    2Feb:
-        oil = true
-        fish = true
-        dairy = false
-        meat =  false
-]
 
-aug1_14= {
+theomitorikes_katalusis_panta=[ 
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true]
+
+theomitorikes_katalisis_ixthios=[
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true]
+
+theomitorikes_katalisis_elaiou=[
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true]
+
+
+prodromou_katalisis_ixthios=[
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true]
+
+prodromou_katalisis_elaiou=[
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true]
+
+prodromou_alado=[
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false]
+
+fasting:
+
+great_lent={
+	eastersunday-48days until eastersunday-8days:
         weekdays:
-            oil = false
-            fish = false
-            dairy = false
-            meat =  false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
         weekend:
-            oil = true
-            fish = false
-            dairy = false
-            meat =  false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
 }
 
-christmas = {
+megalievdomada={
+	eastersunday-6days until eastersunday:
+        weekdays:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
+	EasterSunday:
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true
+}
+
+dekapentaugoustou1_8_14_8= {
+        weekdays:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
+        weekend:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+}
+
+christmaslent15_11_24_12= {
     15/11-20/11:
-        weekdays:
-            oil = false
-            fish = false
-            dairy = false
-            meat =  false
+        Monday, Tuesday, Thursday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+	Wednesday,Friday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
         weekend:
-            oil = true
-            fish = false
-            dairy = false
-            meat =  false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
     21/11:
-        oil = true
-        fish = fish
-        dairy = false
-        meat =  false
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true
     22/11-12/12:
-        weekdays:
-            oil = false
-            fish = false
-            dairy = false
-            meat =  false
+        Monday, Tuesday, Thursday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+	Wednesday,Friday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
         weekend:
-            oil = true
-            fish = false
-            dairy = false
-            meat =  false
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true
     13/12-24/12:
-        weekdays:
-            oil = false
-            fish = false
-            dairy = false
-            meat =  false
+        Monday, Tuesday, Thursday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+	Wednesday,Friday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
         weekend:
-            oil = true
-            fish = false
-            dairy = false
-            meat =  false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+}
+
+apostel = {
+	Monday, Tuesday, Thursday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+	Wednesday,Friday:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
+        weekend:
+	meat =  false
+	dairy = false
+	fish = true
+	wineoil = true
+}
+
+celebration: priority over saints_feasts
+christmastide={
+	25_12 until 4_1:
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true
+	5_1:
+	weekdays:
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
+	weekend:
+	wineoil = false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = true
+}
+
+renewalweek={
+	eastermonday+6days:
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true
+}
+
+telwnoufarisaiou={
+	eastersunday-70days until eastersunday-63days:
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true
+}
+
+tyrinis={
+	eastersunday-55days until eastersunday-49days:
+	meat =  false
+	dairy = true
+	fish = true
+	wineoil = true
 }
 
 
-easter MM/DD = date of easter ... {
-    25 Mar:
-        oil = true
-        fish = true
-        dairy = false
-        meat =  false
-}
 
-apostole = {
+2. Enter algorithm, determine for given day which day in the week it is AND get from db any saint feasts on that day
 
-}
-    
-    
-
-oil = true
-fish = true
-dairy = true
-meat =  true
+	meat =  true
+	dairy = true
+	fish = true
+	wineoil = true
 
 
 if wednesday or friday:
-    oil = false
-    fish = false
-    dairy = false
-    meat =  false
+	meat =  false
+	dairy = false
+	fish = false
+	wineoil = false
+
+if in fasting:
+	if great_lent,dekapentaugoustou1_8_14_8:
+		follow rules but first check
+
+		{if despotiki:
+		follow rules but first check if
+	if despotikes_katalusis_ixthios:
+
+	if despotikes_alado:
 
 
-if fasting day:
-    oil = as defined by the specific fasting
-    fish = as defined by the specific fasting
-    dairy = as defined by the specific fasting
-    meat = as defined by the specific fasting
+		if theomitoriki:
+		follow rules but first check if
+	if theomitorikes_katalisis_ixthios:
+
+	if theomitorikes_katalisi_elaiou:
+
+		
+		If prodromou:
+		follow rules but first check if
+	if prodromou_katalisis_ixthios:
+
+	if prodromou_katalisis_elaiou:
+
+	if prodromou_alado:
+	
+		if saint special_notes == true:
+   		 Follow saint entry in db special_note}
+
+
+	if christmaslent15_11_24_12: 
+		as above
+
+	if apostel:
+		as above
+
+	if megalievdomada:
+		as above
+
+
+if celebration or theomitorikes_katalusis_panta or despotikes_katalusis_panta:
+	if christmastide:
+		follow rule and end
+
+	if renewalweek:
+		follow rule and end
+
+	if telwnoufarisaiou:
+		follow rule and end
+
+	if tyrinis:
+		follow rule and end
+
+if saint special_notes == true:
+	Follow saint entry in db special_note
     
-   
-if saint allows wine and oil == false:
-    oil = true
-   
-
-if despotiki:
-
-
-if theomitoriki:
-
-
-if celebration:
-    ...
    
 
     
