@@ -24,7 +24,7 @@ prodromou_katalisis_elaiou = [euresistimiaskefalis24_2,tritieuresiskefalis25_5,s
 prodromou_alado = [apotomi31_8]
 
 mesopentikostis?
-apodosispasxa?
+apodosispasxa?v
 
 despotikes_katalusis_panta= [ 
 	meat =  true
@@ -338,6 +338,8 @@ if celebration or theomitorikes_katalusis_panta or despotikes_katalusis_panta:
 
 	if tyrinis:
 		follow rule and end
+
+
 
 if saint special_notes == true:
 	Follow saint entry in db special_note
