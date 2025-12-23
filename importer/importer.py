@@ -3,6 +3,7 @@ import mysql.connector as mysql
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+from database import SQL_INSERT_TRANSLATION
 
 # Download and install mySQL dirver:
 # 1. check which environment importer.py is using with command:which python OR
@@ -33,8 +34,7 @@ def translation_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                cur.execute(
-                    "INSERT INTO translation(id, en, de, description, comment) VALUES (%s,%s,%s,%s,%s)", row)
+                cur.execute(SQL_INSERT_TRANSLATION, row)
     except mysql.errors.IntegrityError as e:
         print(str(e))
 
@@ -53,6 +53,11 @@ def event_category_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
+                if row[1] in ("", "NULL", "null"):
+                    row[1] = None
+                else:
+                    row[1] = int(row[1])
+
                 cur.execute("INSERT INTO event_category(id, parent_category_id, code, name, name_translation_id,description,description_translation_id,comment,comment_translation_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)", row)
     except mysql.errors.IntegrityError as e:
         print(str(e))
@@ -145,7 +150,7 @@ def main():
     if load_event:
         translation_load(load_translation, cur)
         event_category_load(load_event_category, cur)
-        event_load(load_event, cur)
+        # event_load(load_event, cur)
     else:
         print("Key does not exist")
 
