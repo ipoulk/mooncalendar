@@ -18,3 +18,11 @@ Cells are clickable to display detailed information for a given date.
 - Frontend: React, HTML/CSS/JavaScript
 - Tooling: Git, Maven, IntelliJ IDEA
 
+
+## Python virtual environment (macOS)
+
+- `python3 -m venv .venv`
+- `source .venv/bin/activate`
+- `python -m pip install -U pip`
+- `pip install -r requirements.txt`
+

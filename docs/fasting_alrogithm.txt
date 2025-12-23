@@ -3,7 +3,7 @@
 fasting = [ great_lent,dekapentaugoustou1_8_14_8, christmaslent15_11_24_12, apostel, megalievdomada]
 
 
-celebration =  [ christmastide,renewalweek,telwnoufarisaiou,tyrinis ]
+celebration =  [ christmastide,renewalweek,telwnoufarisaiou,tyrinis,evdomadapentikostis ]
 
 statheres=[wednesday,friday]
 
@@ -21,10 +21,9 @@ theomitorikes_katalisi_elaiou=[katathesitimiaszwnhs31_8,katathesistimiasesthitos
 
 prodromou_katalisis_ixthios = [genethlia24_6,sinaxis7_1]
 prodromou_katalisis_elaiou = [euresistimiaskefalis24_2,tritieuresiskefalis25_5,sillipsis23_9]
-prodromou_alado = [apotomi31_8]
+prodromou_alado = [apotomi29_8]
 
-mesopentikostis?
-apodosispasxa?v
+ 
 
 despotikes_katalusis_panta= [ 
 	meat =  true
@@ -32,7 +31,7 @@ despotikes_katalusis_panta= [
 	fish = true
 	wineoil = true]
         
-despotikes_katalusis_ixthios= [ 
+despotikes_katalusis_ixthios= [  
 	meat =  false
 	dairy = false
 	fish = true
