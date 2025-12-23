@@ -1,0 +1,11 @@
+id,code,date_rule_type_id,fasting_type_id,event_id,start_month,start_day,end_month,end_day,description,description_translation_id,comment,comment_translation_id,created_at,updated_at
+1,,,,3,,,,,,,Cheesefare week,,,
+2,,,,27,,,,,,,Holy Week,,,
+3,,,,25,,,,,,,Great Lent,,,
+4,,,,5,,,,,,,Easter +6,,,
+5,,,,28,,,,,,,Annunciation:  fixed single day (no offset),,,
+6,,,,82,,,,,,,,,,
+7,,,,30,,,,,,,Palm Sunday,,,
+8,,,,73,11,15,12,24,,,,,,
+9,,,,24,,,,,,,Clean Monday,,,
+10,,,,,,,,,,,,,,

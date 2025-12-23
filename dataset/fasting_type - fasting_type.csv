@@ -1,0 +1,6 @@
+id,code,name,name_translation_id,description,description_translation_id,comment,comment_translation_id,meat,dairy,fish,wineoil,created_at,updated_at
+1,oil-free,Άλαδο,29,"refrain from meat, fishtail, wine, dairy, and eggs.",353,,1,0,0,0,0,,
+2,oil allowed,Λάδι,30,"wine and oil are allowed. refrain from meat, fish, dairy, and eggs.",354,,1,0,0,0,1,,
+3,fish,Ψάρι,31,"refrain from meat, dairy and eggs",355,,1,0,0,1,1,,
+4,dairy,Γακακτομικά,32,"dairy, eggs, fishtail and wine allowed.refrain from meat.",356,,1,0,1,1,1,,
+5,all foods,Τα πάντα,33,"fast-free, all foods allowed ",357,,1,1,1,1,1,,
