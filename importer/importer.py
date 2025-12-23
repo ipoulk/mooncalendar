@@ -110,8 +110,6 @@ def main():
     if not dir_path.exists() or not dir_path.is_dir():
         raise ValueError("Directory does not exist or is not a directory")
 
-    exit(0)
-    
     # MySQL connection notes (local Mac)
     # Workbench checks:
     # - Workbench params: Home → connection "wrench" icon → Hostname / Port / Username
@@ -137,14 +135,6 @@ def main():
 
     # cursor executes SQL and fetches results via the connection
     cur = mydb.cursor()
-
-    csv_path = os.getenv("CSV_ROOT_PATH")
-
-    if not csv_path:
-        raise ValueError("CSV_ROOT_PATH not set in environment variables")
-
-    if not csv_path.endswith('/'):
-        csv_path += '/'
 
     load_translation = csv_path + os.getenv("TRANSLATION_CSV")
     load_event_category = csv_path + os.getenv("EVENT_CATEGORY_CSV")
