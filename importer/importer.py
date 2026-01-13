@@ -25,8 +25,9 @@ def translation_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -34,16 +35,20 @@ def translation_load(csv_path, cur):
 
             for row in data_reader:   
                 cur.execute(SQL_INSERT_TRANSLATION, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(str(e))
+    
+    print(f"translation_load: {rows_inserted} rows inserted successfully")
 
 # date_rule_type
 def date_rule_type_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -55,16 +60,20 @@ def date_rule_type_load(csv_path, cur):
                 else:
                     row[3] = int(row[3])
                 cur.execute(SQL_INSERT_DATE_RULE_TYPE, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(str(e))
+    
+    print(f"date_rule_type_load: {rows_inserted} rows inserted successfully")
 
 # fasting type
 def fasting_type_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -77,16 +86,20 @@ def fasting_type_load(csv_path, cur):
                     row[3] = int(row[3])
 
                 cur.execute(SQL_INSERT_FASTING_TYPE, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(str(e))
+    
+    print(f"fasting_type_load: {rows_inserted} rows inserted successfully")
 
 # event_category
 def event_category_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -99,16 +112,20 @@ def event_category_load(csv_path, cur):
                     row[1] = int(row[1])
 
                 cur.execute(SQL_INSERT_EVENT_CATEGORY, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(str(e))
+    
+    print(f"event_category_load: {rows_inserted} rows inserted successfully")
 
 # event
 def event_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -125,18 +142,21 @@ def event_load(csv_path, cur):
                 category_id = row[3]
                 name_translation = row[5]
                 cur.execute(SQL_INSERT_EVENT, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(
             f"foreign key missing: event: {event_id} and category id:{category_id} and translation id:{name_translation}" + str(e))
+    
+    print(f"event_load: {rows_inserted} rows inserted successfully")
 
 # event_date_rule
 def event_date_rule_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
-    
+    rows_inserted = 0
     with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
             next(data_reader)
@@ -189,10 +209,12 @@ def event_date_rule_load(csv_path, cur):
                
                 try:
                     cur.execute(SQL_INSERT_EVENT_DATE_RULE, row)
+                    rows_inserted += 1
                 except mysql.Error as e:
                     print(f"Failed row id={row[0]}: {e}")
                     continue
     
+    print(f"event_date_rule_load: {rows_inserted} rows inserted successfully")
       
         # optionally continue to the next row
            
@@ -202,8 +224,9 @@ def language_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -216,16 +239,20 @@ def language_load(csv_path, cur):
                     row[3] = int(row[3])
 
                 cur.execute(SQL_INSERT_LANGUAGE, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
         print(str(e))
+    
+    print(f"language_load: {rows_inserted} rows inserted successfully")
 
 # document_category
 def document_category_load(csv_path, cur):
     csv_path = Path(csv_path)
 
     if not csv_path.exists() or not csv_path.is_file():
-        raise ValueError("Does not exist or is not a file")
+        raise ValueError("Does not exist or is not a file: " + str(csv_path))
 
+    rows_inserted = 0
     try:
         with csv_path.open("r", encoding="utf-8-sig", newline="") as file:
             data_reader = csv.reader(file)
@@ -238,8 +265,11 @@ def document_category_load(csv_path, cur):
                     row[3] = int(row[3])
 
                 cur.execute(SQL_INSERT_DOCUMENT_CATEGORY, row)
+                rows_inserted += 1
     except mysql.errors.IntegrityError as e:
-        print(str(e))        
+        print(str(e))
+    
+    print(f"document_category_load: {rows_inserted} rows inserted successfully")        
 
 # cur.execute("SELECT VERSION()")
 
@@ -266,7 +296,7 @@ def main():
     dir_path = Path(csv_path)
 
     if not dir_path.exists() or not dir_path.is_dir():
-        raise ValueError("Directory does not exist or is not a directory")
+        raise ValueError("Directory does not exist or is not a directory: " + str(dir_path))
 
     # MySQL connection notes (local Mac)
     # Workbench checks:
