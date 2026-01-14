@@ -4,7 +4,7 @@ Interactive web-based calendar with month and year views. For each day, the appl
 
 ## Current State
 - Spring Boot backend initialized and running.
-- MySQL database schema and reference data in progress.
+- MySQL database schema and reference data ingestion implemented.
 - CSV-to-MySQL data ingestion implemented (Python) for loading calendar, event, category, translation, and rule tables.
 - REST API endpoints and JPA entities under development.
 - Frontend (React) planned.
