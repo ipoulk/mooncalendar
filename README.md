@@ -42,3 +42,37 @@ source .venv/bin/activate
 python -m pip install -U pip
 pip install -r requirements.txt
 
+### Configuration
+CSV_ROOT_PATH=../
+EVENT_CSV=
+EVENT_CATEGORY_CSV=
+TRANSLATION_CSV=
+DATE_RULE_TYPE_CSV=
+EVENT_DATE_RULE_CSV=
+FASTING_TYPE_CSV=
+EVENT_HAS_IMAGE_CSV=
+EVENT_HAS_DOCUMENT_CSV=
+DOCUMENT_CSV= 
+DOCUMENT_HAS_IMAGE_CSV=
+DOCUMENT_CATEGORY_CSV=
+IMAGE_CSV
+LANGUAGE_CSV
+
+DB_HOST
+DB_PORT
+DB_USER
+DB_PASSWORD
+DB_NAME
+
+### Run Import
+
+python3 importer.py
+
+## Roadmap
+
+- Finalize relational schema and implement JPA entities
+- Implement core REST endpoints (GET by date, list by month/year)
+- Add validation and error handling
+- Add unit/integration tests
+- Build initial React UI and connect to the REST API
+
