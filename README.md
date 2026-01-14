@@ -36,13 +36,20 @@ It handles:
 
 ### Setup
 
+Run these steps to create a venv and install dependencies:
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -U pip
 pip install -r requirements.txt
+```
 
 ### Configuration
+
+Create an environment file (for example `.env`) or export these variables. Example keys used by the importer:
+
+```
 CSV_ROOT_PATH=../
 EVENT_CSV=
 EVENT_CATEGORY_CSV=
@@ -52,21 +59,26 @@ EVENT_DATE_RULE_CSV=
 FASTING_TYPE_CSV=
 EVENT_HAS_IMAGE_CSV=
 EVENT_HAS_DOCUMENT_CSV=
-DOCUMENT_CSV= 
+DOCUMENT_CSV=
 DOCUMENT_HAS_IMAGE_CSV=
 DOCUMENT_CATEGORY_CSV=
-IMAGE_CSV
-LANGUAGE_CSV
+IMAGE_CSV=
+LANGUAGE_CSV=
 
-DB_HOST
-DB_PORT
-DB_USER
-DB_PASSWORD
-DB_NAME
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+```
 
 ### Run Import
 
+Execute the importer from the project root:
+
+```bash
 python3 importer.py
+```
 
 ## Roadmap
 
