@@ -1,2 +1,6 @@
 .env
 .DS_Store
+sources
+docs/fasting_algorithm.txt
+docs/Παραδοχες.pdf
+docs/Γεγονοτα.drawio.png
