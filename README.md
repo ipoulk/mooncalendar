@@ -9,6 +9,11 @@ Interactive web-based calendar with month and year views. For each day, the appl
 - REST API endpoints and JPA entities under development.
 - Frontend (React) planned.
 
+## Repository Layout / Data Model
+- DB schema is store in /database/
+- Seed CSVs are stored in /database/production/
+- Data model was designed upfront (see ER diagram in /docs/)
+
 ## Tech Stack
 - **Backend:** Java 17, Spring Boot (REST APIs)
 - **Database:** MySQL
