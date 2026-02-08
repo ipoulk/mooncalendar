@@ -14,11 +14,23 @@ public class MonthResponse {
         return year;
     }
 
+    public void setYear(Integer year){
+        this.year=year;
+    }
+
     public Integer getMonth(){
         return month;
     }
 
+    public void setMonth(Integer month){
+        this.month = month;
+    }
+
     public List<DayResponse> getDays(){
         return days;
+    }
+
+    public void setDays(List<DayResponse> days){
+        this.days = days;
     }
 }

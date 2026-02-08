@@ -13,7 +13,15 @@ public class DayResponse {
         return date;
     }
 
+    public void setDate(LocalDate date){
+        this.date=date;
+    }
+
     public List<String> getEventTitles(){
         return eventTitles;
+    }
+
+    public void setEventTitles(List<String> eventTitles){
+        this.eventTitles=eventTitles;
     }
 }
