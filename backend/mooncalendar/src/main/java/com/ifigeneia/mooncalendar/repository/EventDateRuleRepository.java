@@ -12,5 +12,7 @@ public interface EventDateRuleRepository extends JpaRepository<EventDateRule, Lo
     List<EventDateRule> findByStartMonthAndStartDay(Integer startMonth, Integer startDay);
     List<EventDateRule> findByStartMonth(Integer startMonth);
     List<EventDateRule> findByStartMonthAndDateRuleType_Code(Integer startMonth, String dateRuleTypeCode);
+    List<EventDateRule> findByDateRuleType_Code(String dateRuleTypeCode);
+
 
 }

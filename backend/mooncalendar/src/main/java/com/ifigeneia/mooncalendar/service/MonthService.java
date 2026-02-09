@@ -15,41 +15,50 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-
 @Service
 public class MonthService {
 
-    private final EventDateRuleRepository eventDateRuleRepository;
+    private final MonthEventsProvider monthEventsProvider;
     @Autowired
-    public MonthService(EventDateRuleRepository eventDateRuleRepository){
-        this.eventDateRuleRepository = eventDateRuleRepository;
+    public MonthService(MonthEventsProvider monthEventsProvider){
+        this.monthEventsProvider = monthEventsProvider;
     }
 
 
+    public MonthResponse buildMonthSkeleton(Integer year, Integer month){
 
-    public MonthResponse getMonth(Integer year, Integer month, String dateRuleTypeCode){
-        List<EventDateRule> days = eventDateRuleRepository.findByStartMonthAndDateRuleType_Code(month,dateRuleTypeCode);
-        Map<Integer, List<String>> eventsByDay= new TreeMap<>();
-        for(EventDateRule d: days)
-        {eventsByDay.computeIfAbsent(d.getStartDay(), key ->new ArrayList<>()).add(d.getEvent().getName());
-        }
-        MonthResponse monthDaysTitles  = new MonthResponse();
+        MonthResponse monthDaysSkeleton  = new MonthResponse();
         List<DayResponse> dayResponses = new ArrayList<>();
 
         YearMonth yearMonth = YearMonth.of(year,month);
+
         for (int i =1; i<=yearMonth.lengthOfMonth(); i++){
             LocalDate date = LocalDate.of(year,month,i);
             DayResponse dateTitle= new DayResponse();
-            List<String> l = List.of();
+            List<String> l = new ArrayList<>();
             dateTitle.setDate(date);
-            dateTitle.setEventTitles(eventsByDay.getOrDefault(i,l));
+            dateTitle.setEventTitles(l);
+
             dayResponses.add(dateTitle);
-
-
         }
-        monthDaysTitles.setDays(dayResponses);
-        monthDaysTitles.setYear(year);
-        monthDaysTitles.setMonth(month);
-        return monthDaysTitles;
+        monthDaysSkeleton.setDays(dayResponses);
+        monthDaysSkeleton.setYear(year);
+        monthDaysSkeleton.setMonth(month);
+        return monthDaysSkeleton;
+    }
+
+    public MonthResponse getAllMonthEvents(Integer year, Integer month){
+        MonthResponse skeleton = buildMonthSkeleton(year, month);
+        Map<Integer, List<String>> eventsByDay = monthEventsProvider.aggregateRulesEvents(year,month);
+
+            for (DayResponse dayResponse: skeleton.getDays()){
+                Integer dayNumber = dayResponse.getDate().getDayOfMonth();
+                List<String> titles = eventsByDay.get(dayNumber);
+                if ( titles != null ){
+                    dayResponse.setEventTitles(titles);
+                }
+            }
+
+        return skeleton;
     }
 }

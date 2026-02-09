@@ -155,7 +155,7 @@ public class EventDateRule {
         this.endMonth = endMonth;
     }
 
-    public Integer getEventDay(){
+    public Integer getEndDay(){
         return endDay;
     }
 

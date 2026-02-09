@@ -23,6 +23,6 @@ public class MonthController {
     @GetMapping("/month")
     public MonthResponse thesearethemonths( @RequestParam("year") Integer year,  @RequestParam("month") Integer month){
 
-        return monthService.getMonth(year,month,"fixed_day");
+        return monthService.getAllMonthEvents(year,month);
     }
 }
