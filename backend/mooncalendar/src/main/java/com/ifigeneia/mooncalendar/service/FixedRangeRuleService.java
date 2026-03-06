@@ -26,8 +26,6 @@ public class FixedRangeRuleService {
 
     public Map<Integer, List<String>> getFixedRangeEvents(Integer year, Integer month){
          List<EventDateRule> byFixedRange = eventDateRuleRepository.findByDateRuleType_Code("fixed_range");
-
-
          Map<Integer, List<String>>  eventsByFixedRangeScattered = new TreeMap<>();
 
          Integer numberOfDays = YearMonth.of(year,month).lengthOfMonth();

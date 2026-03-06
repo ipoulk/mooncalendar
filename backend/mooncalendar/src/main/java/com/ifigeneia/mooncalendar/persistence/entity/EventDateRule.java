@@ -41,6 +41,15 @@ public class EventDateRule {
     @Column(name="end_day")
     private Integer endDay;
 
+    @Column(name="anchor")
+    private String anchor;
+
+    @Column(name="start_offset_days")
+    private Integer startOffsetDays;
+
+    @Column(name="end_offset_days")
+    private Integer endOffsetDays;
+
     private String description;
 
     @ManyToOne(fetch=FetchType.LAZY)
@@ -70,6 +79,9 @@ public class EventDateRule {
                         Integer startDay,
                         Integer endMonth,
                         Integer endDay,
+                        String anchor,
+                        Integer startOffsetDays,
+                        Integer endOffsetDays,
                         String description,
                         Translation descriptionTranslation,
                         String comment,
@@ -83,11 +95,13 @@ public class EventDateRule {
         this.startDay = startDay;
         this.endMonth = endMonth;
         this.endDay = endDay;
+        this.anchor = anchor;
+        this.startOffsetDays = startOffsetDays;
+        this.endOffsetDays = endOffsetDays;
         this.description = description;
         this.descriptionTranslation = descriptionTranslation;
         this.comment = comment;
         this.commentTranslation = commentTranslation;
-
     }
 
 
@@ -163,6 +177,29 @@ public class EventDateRule {
         this.endDay = endDay;
     }
 
+    public String getAnchor(){
+        return anchor;
+    }
+
+    public void setAnchor(String anchor){
+        this.anchor = anchor;
+    }
+
+    public Integer getStartOffsetDays(){
+        return startOffsetDays:
+    }
+
+    public void setStartOffsetDays (Integer startOffsetDays){
+        this.startOffsetDays=startOffsetDays;
+    }
+
+    public Integer getEndOffsetDays(){
+        return startOffsetDays;
+    }
+
+    public void setEndOffsetDays(Integer endOffsetDays){
+        this.endOffsetDays=endOffsetDays;
+    }
     public String getDescription(){
         return description;
     }

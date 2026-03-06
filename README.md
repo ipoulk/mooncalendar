@@ -93,3 +93,8 @@ python3 importer.py
 - Add unit/integration tests
 - Build initial React UI and connect to the REST API
 
+## Slice 1
+
+GET /api/month?year=YYYY&month=MM returns a month view where each day contains a list of event titles for fixed_day rules.
+- Implemented in MonthService: builds MonthResponse/DayResponse and maps fixed-day rules (start_month/start_day) to day cells.
+

@@ -1,6 +1,9 @@
 package com.ifigeneia.mooncalendar.persistence.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -34,15 +37,19 @@ public class FastingType {
     @JoinColumn(name="comment_translation_id",nullable=false)
     private Translation commentTranslation;
 
+    @JdbcTypeCode(SqlTypes.TINYINT)
     @Column(nullable=false)
     private Boolean meat;
 
+    @JdbcTypeCode(SqlTypes.TINYINT)
     @Column(nullable=false)
     private Boolean dairy;
 
+    @JdbcTypeCode(SqlTypes.TINYINT)
     @Column(nullable=false)
     private Boolean fish;
 
+    @JdbcTypeCode(SqlTypes.TINYINT)
     @Column(nullable=false)
     private Boolean wineoil;
 

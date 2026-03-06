@@ -2,6 +2,8 @@ package com.ifigeneia.mooncalendar.persistence.entity;
 
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.*;
 
@@ -17,6 +19,7 @@ public class Event {
     @Column(nullable=false, unique = true)
     private String code;
 
+    @JdbcTypeCode(SqlTypes.TINYINT)
     @Column(name="is_season")
     private Boolean isSeason;
 
