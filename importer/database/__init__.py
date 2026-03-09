@@ -133,12 +133,15 @@ SQL_INSERT_EVENT_DATE_RULE= """
         start_day,
         end_month,
         end_day,
+        anchor,
+        start_offset_days,
+        end_offset_days,
         description,
         description_translation_id,
         comment,
         comment_translation_id
      )
-    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
     ON DUPLICATE KEY UPDATE
         code=VALUES(code),
         date_rule_type_id=VALUES(date_rule_type_id),
@@ -148,6 +151,9 @@ SQL_INSERT_EVENT_DATE_RULE= """
         start_day=VALUES(start_day),
         end_month=VALUES(end_month),
         end_day=VALUES(end_day),
+        anchor=VALUES(anchor),
+        start_offset_days=VALUES(start_offset_days),
+        end_offset_days=VALUES(end_offset_days),
         description=VALUES(description),
         description_translation_id=VALUES(description_translation_id),
         comment= VALUES(comment),

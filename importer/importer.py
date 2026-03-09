@@ -11,14 +11,24 @@ from database import SQL_INSERT_DATE_RULE_TYPE,SQL_INSERT_DOCUMENT_CATEGORY, SQL
 #    check bottom right hand status bar.
 # 2. check whether the MySQL driver is installed in THAT environment with : python3 -m pip show mysql-connector-python
 #     if not installed run: python3 -m pip install mysql-connector-python
+#       If at .venv environment, make sure to activate it first and run the install commands in that environment:
+#       - python3 -m venv .venv
+#       - source .venv/bin/activate
+#       - which python
+#       - python -m pip install --upgrade pip
+#       python -m pip install mysql-connector-python
 # 3. Verify that it is installed with: python3 -m pip show mysql-connector-python
 # Note: pip is Python's package installer
 
 # validation helper
 
 
-def validate_loads(csv_path):
-    pass
+def validate_loads(value):
+    if value in ("", "NULL", "null"):
+        return None
+    else:
+        return int(value)
+    
 
 # translation
 def translation_load(csv_path, cur):
@@ -55,10 +65,7 @@ def date_rule_type_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
+                row[3] = validate_loads(row[3])
                 cur.execute(SQL_INSERT_DATE_RULE_TYPE, row)
                 rows_inserted += 1
     except mysql.errors.IntegrityError as e:
@@ -80,10 +87,7 @@ def fasting_type_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
+                row[3] = validate_loads(row[3])
 
                 cur.execute(SQL_INSERT_FASTING_TYPE, row)
                 rows_inserted += 1
@@ -106,10 +110,7 @@ def event_category_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[1] in ("", "NULL", "null"):
-                    row[1] = None
-                else:
-                    row[1] = int(row[1])
+                row[1] = validate_loads(row[1])
 
                 cur.execute(SQL_INSERT_EVENT_CATEGORY, row)
                 rows_inserted += 1
@@ -134,10 +135,7 @@ def event_load(csv_path, cur):
             category_id = ""
             name_translation = ""
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
+                row[3] = validate_loads(row[3])
                 event_id = row[0]
                 category_id = row[3]
                 name_translation = row[5]
@@ -162,50 +160,17 @@ def event_date_rule_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
-
-                if row[5] in ("", "NULL", "null"):
-                    row[5] = None
-                else:
-                    row[5] = int(row[5])
-
-                if row[6] in ("", "NULL", "null"):
-                    row[6] = None
-                else:
-                    row[6] = int(row[6])
-
-                if row[7] in ("", "NULL", "null"):
-                    row[7] = None
-                else:
-                    row[7] = int(row[7])
-
-                if row[8] in ("", "NULL", "null"):
-                    row[8] = None
-                else:
-                    row[8] = int(row[8]) 
-
-                if row[2] in ("", "NULL", "null"):
-                    row[2] = None
-                else:
-                    row[2] = int(row[2])    
-
-                if row[4] in ("", "NULL", "null"):
-                    row[4] = None
-                else:
-                    row[4] = int(row[4])   
-
-                if row[10] in ("", "NULL", "null"):
-                    row[10] = None
-                else:
-                    row[10] = int(row[10])  
-
-                if row[12] in ("", "NULL", "null"):
-                    row[12] = None
-                else:
-                    row[12] = int(row[12])   
+                row[3] = validate_loads(row[3])
+                row[5] = validate_loads(row[5])
+                row[6] = validate_loads(row[6])
+                row[7] = validate_loads(row[7])
+                row[8] = validate_loads(row[8])
+                row[2] = validate_loads(row[2]) 
+                row[4] = validate_loads(row[4])
+                row[10] = validate_loads(row[10])
+                row[11] = validate_loads(row[11])      
+                row[13] = validate_loads(row[13]) 
+                row[15] = validate_loads(row[15])   
                
                 try:
                     cur.execute(SQL_INSERT_EVENT_DATE_RULE, row)
@@ -233,10 +198,7 @@ def language_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
+                row[3] = validate_loads(row[3])
 
                 cur.execute(SQL_INSERT_LANGUAGE, row)
                 rows_inserted += 1
@@ -259,10 +221,7 @@ def document_category_load(csv_path, cur):
             next(data_reader)
 
             for row in data_reader:
-                if row[3] in ("", "NULL", "null"):
-                    row[3] = None
-                else:
-                    row[3] = int(row[3])
+                row[3] = validate_loads(row[3])
 
                 cur.execute(SQL_INSERT_DOCUMENT_CATEGORY, row)
                 rows_inserted += 1

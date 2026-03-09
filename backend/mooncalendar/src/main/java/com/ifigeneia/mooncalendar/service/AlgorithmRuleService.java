@@ -35,6 +35,9 @@ public class AlgorithmRuleService {
         LocalDate easterDate = calculateEaster(year);
         Integer m = easterDate.getMonthValue();
         for (EventDateRule eventDate: byRelativeAlgorithm){
+            if (eventDate.getEvent().getId()==76){
+
+            }
             if (eventDate.getAnchor().equals("Pascha")) {
                 LocalDate tempStart = easterDate.plusDays(eventDate.getStartOffsetDays());
                 LocalDate tempEnd = easterDate.plusDays(eventDate.getEndOffsetDays());
