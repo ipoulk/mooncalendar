@@ -35,8 +35,14 @@ public class AlgorithmRuleService {
         LocalDate easterDate = calculateEaster(year);
         Integer m = easterDate.getMonthValue();
         for (EventDateRule eventDate: byRelativeAlgorithm){
-            if (eventDate.getEvent().getId()==76){
-
+            if (eventDate.getEvent().getId()==76 ){
+                LocalDate clean_monday= easterDate.plusDays(-48);
+                LocalDate event_st_george = LocalDate.of(year, eventDate.getStartMonth(), eventDate.getStartDay());
+                if(event_st_george.isBefore(clean_monday)){
+                    eventsbyAlgorithm.computeIfAbsent(eventDate.getStartDay(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
+                } else{
+                    eventsbyAlgorithm.computeIfAbsent(easterDate.plusDays(2).getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
+                }
             }
             if (eventDate.getAnchor().equals("Pascha")) {
                 LocalDate tempStart = easterDate.plusDays(eventDate.getStartOffsetDays());
@@ -170,7 +176,7 @@ public class AlgorithmRuleService {
         return eventsbyAlgorithm;
     }
 
-    // calculate Easter date for given
+    // calculate Easter date for given year
     private LocalDate calculateEaster(Integer year){
 
         // using Meeus-style
