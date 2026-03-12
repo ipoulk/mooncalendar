@@ -2,16 +2,13 @@ package com.ifigeneia.mooncalendar.service;
 
 import com.ifigeneia.mooncalendar.persistence.entity.EventDateRule;
 import com.ifigeneia.mooncalendar.repository.EventDateRuleRepository;
-import com.ifigeneia.mooncalendar.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Service;
 
-import java.awt.desktop.AboutEvent;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.YearMonth;
-import java.time.format.TextStyle;
 import java.time.temporal.JulianFields;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,20 +30,21 @@ public class AlgorithmRuleService {
         Map<Integer, List<String>> eventsbyAlgorithm = new TreeMap<>();
 
         LocalDate easterDate = calculateEaster(year);
-        Integer m = easterDate.getMonthValue();
-        for (EventDateRule eventDate: byRelativeAlgorithm){
-            if (eventDate.getEvent().getId()==76 ){
-                LocalDate clean_monday= easterDate.plusDays(-48);
+
+        for (EventDateRule eventDate: byRelativeAlgorithm) {
+            if (eventDate.getEvent().getId() == 76) {
+                LocalDate clean_monday = easterDate.plusDays(-48);
                 LocalDate event_st_george = LocalDate.of(year, eventDate.getStartMonth(), eventDate.getStartDay());
-                if(event_st_george.isBefore(clean_monday)){
+                if (event_st_george.isBefore(clean_monday)) {
                     eventsbyAlgorithm.computeIfAbsent(eventDate.getStartDay(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                } else{
+                } else {
                     eventsbyAlgorithm.computeIfAbsent(easterDate.plusDays(2).getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
                 }
             }
             if (eventDate.getAnchor().equals("Pascha")) {
                 LocalDate tempStart = easterDate.plusDays(eventDate.getStartOffsetDays());
                 LocalDate tempEnd = easterDate.plusDays(eventDate.getEndOffsetDays());
+                Integer daysInmonth = YearMonth.of(year, month).lengthOfMonth();
                 // Single Day Event
                 if (tempStart.equals(tempEnd) && tempStart.getMonthValue() == month) {
                     eventsbyAlgorithm.computeIfAbsent(tempStart.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
@@ -54,7 +52,7 @@ public class AlgorithmRuleService {
                 // Event that stretches over a period of time and month falls on start date of event
                 else if (tempStart.getMonthValue() == month) {
                     if (tempEnd.getMonthValue() != month) {
-                        int daysInmonth = YearMonth.of(year, month).lengthOfMonth();
+
                         for (int i = tempStart.getDayOfMonth(); i <= daysInmonth; i++) {
                             eventsbyAlgorithm.computeIfAbsent(i, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
                         }
@@ -69,109 +67,52 @@ public class AlgorithmRuleService {
                     for (int i = 1; i <= tempEnd.getDayOfMonth(); i++) {
                         eventsbyAlgorithm.computeIfAbsent(i, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
                     }
+                } else if (tempStart.getMonthValue() < month && month < tempEnd.getMonthValue()) {
+
+                    for (int i = 1; i <= daysInmonth; i++) {
+                        eventsbyAlgorithm.computeIfAbsent(i, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
+                    }
                 }
-            }
-            else if (eventDate.getAnchor().equals("Christmas")){
-                LocalDate ChristmasDay = LocalDate.of(year,month,25);
+            } else if (eventDate.getAnchor().equals("Christmas")) {
+                LocalDate ChristmasDay = LocalDate.of(year, 12, 25);
                 DayOfWeek dayofChristmas = ChristmasDay.getDayOfWeek();
-                int daynumber = dayofChristmas.getValue();
-                if (eventDate.getEvent().getId()== 35 && month==12 ){
-                    DayOfWeek day = LocalDate.of(year,month,11).getDayOfWeek();
-                    int Daynumber = day.getValue();
-                    if (Daynumber == 7){
-                        eventsbyAlgorithm.computeIfAbsent(11, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                    } else{
 
-                        LocalDate event;
-                        switch(daynumber){
-                            case 1:event= ChristmasDay.plusDays(-8);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 2:event= ChristmasDay.plusDays(-9);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 3:event= ChristmasDay.plusDays(-10);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 4:event= ChristmasDay.plusDays(-11);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 5:event= ChristmasDay.plusDays(-12);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 6:event= ChristmasDay.plusDays(-13);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 7:event= ChristmasDay.plusDays(-14);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                        }
-                    }
-                }
-                if (eventDate.getEvent().getId()== 40 && month==12 ){
-                    DayOfWeek day = LocalDate.of(year,month,18).getDayOfWeek();
-                    int Daynumber = day.getValue();
-                    if (Daynumber == 7){
-                        eventsbyAlgorithm.computeIfAbsent(18, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                    } else{
-                        LocalDate event;
-                        switch(daynumber){
-                            case 1:event= ChristmasDay.plusDays(-1);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 2:event= ChristmasDay.plusDays(-2);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 3:event= ChristmasDay.plusDays(-3);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 4:event= ChristmasDay.plusDays(-4);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 5:event= ChristmasDay.plusDays(-5);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 6:event= ChristmasDay.plusDays(-6);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 7:event= ChristmasDay.plusDays(-7);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                        }
-                    }
-                }
-                if (eventDate.getEvent().getId()== 48 && month==12 ){
-                    DayOfWeek day = LocalDate.of(year,month,26).getDayOfWeek();
-                    int Daynumber = day.getValue();
-                    if (Daynumber == 7){
-                        eventsbyAlgorithm.computeIfAbsent(18, key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                    } else{
-                        LocalDate event;
-                        switch(daynumber){
-                            case 1:event= ChristmasDay.plusDays(6);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 2:event= ChristmasDay.plusDays(5);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 3:event= ChristmasDay.plusDays(4);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 4:event= ChristmasDay.plusDays(3);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 5:event= ChristmasDay.plusDays(2);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                            case 6:event= ChristmasDay.plusDays(1);
-                                eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
-                                break;
-                        }
-                    }
-                }
+                if (eventDate.getEvent().getCode().equals("feast.sunday_forefathers") && month == 12) {
+                    int daystoSub = (dayofChristmas.getValue()==7) ? 14 : dayofChristmas.getValue()+7;
+                    LocalDate sundayForefathers = ChristmasDay.minusDays(daystoSub);
 
+                    if (sundayForefathers.getYear() == year && sundayForefathers.getMonthValue() == month){
+                        eventsbyAlgorithm.computeIfAbsent(sundayForefathers.getDayOfMonth(),key->new ArrayList<>()).add((eventDate.getEvent().getName()));
+                    }
+                }
+                if (eventDate.getEvent().getCode().equals("feast.sunday_before_nativity") && month == 12) {
+                    int daysToSubs = (dayofChristmas.getValue() == 7) ? 7 : (dayofChristmas.getValue());
+                    LocalDate sundayBeforeChristmas = ChristmasDay.minusDays(daysToSubs);
+
+
+                    if (sundayBeforeChristmas.getYear() == year && sundayBeforeChristmas.getMonthValue() == month) {
+                        eventsbyAlgorithm.computeIfAbsent(sundayBeforeChristmas.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
+                        }
+                    }
+                if (eventDate.getEvent().getCode().equals("feast.sunday_after_nativity")) {
+                    Integer anchorYear = year;
+                    if (month.equals(12)) {
+                        anchorYear = year;
+                    } else if (month.equals(1)) {
+                        anchorYear = year - 1;
+                    } else {
+                        continue;
+                    }
+                    LocalDate NativityS = LocalDate.of(anchorYear, 12, 26);
+                    DayOfWeek day = NativityS.getDayOfWeek();
+                    int Daynumber = day.getValue();
+                    int daysToAdd = (Daynumber == 7) ? 0 : (7 - Daynumber);
+                    LocalDate event = NativityS.plusDays(daysToAdd);
+                    if (event.getYear() == year && event.getMonthValue() == month) {
+                        eventsbyAlgorithm.computeIfAbsent(event.getDayOfMonth(), key -> new ArrayList<>()).add(eventDate.getEvent().getName());
+                    }
+                }
             }
-
         }
         return eventsbyAlgorithm;
     }

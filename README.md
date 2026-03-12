@@ -96,5 +96,5 @@ python3 importer.py
 ## Slice 1
 
 GET /api/month?year=YYYY&month=MM returns a month view where each day contains a list of event titles for fixed_day rules.
-- Implemented in MonthService: builds MonthResponse/DayResponse and maps fixed-day rules (start_month/start_day) to day cells.
+-  Implemented in MonthService: builds MonthResponse/DayResponse and maps fixed-day rules (start_month/start_day) to day cells.
 
