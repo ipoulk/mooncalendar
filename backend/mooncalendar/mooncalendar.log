@@ -1,0 +1,296 @@
+2026-03-15T00:08:18.440+01:00  INFO 90907 --- [mooncalendar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-15T00:08:18.452+01:00  INFO 90907 --- [mooncalendar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-15T00:08:18.455+01:00  INFO 90907 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:08:18.460+01:00  INFO 90907 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:08:18.462+01:00  INFO 90907 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:08:23.290+01:00  INFO 91125 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Starting MooncalendarApplicationTests using Java 21.0.8 with PID 91125 (started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:08:23.291+01:00  INFO 91125 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:08:23.530+01:00  INFO 91125 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:08:23.548+01:00  INFO 91125 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:08:23.707+01:00  INFO 91125 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:08:23.784+01:00  INFO 91125 --- [mooncalendar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@716f94c1
+2026-03-15T00:08:23.785+01:00  INFO 91125 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:08:23.807+01:00  INFO 91125 --- [mooncalendar] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:08:24.072+01:00  INFO 91125 --- [mooncalendar] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2026-03-15T00:08:24.079+01:00  INFO 91125 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:08:24.080+01:00  INFO 91125 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:08:24.106+01:00  INFO 91125 --- [mooncalendar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:08:24.121+01:00  INFO 91125 --- [mooncalendar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:08:24.131+01:00  INFO 91125 --- [mooncalendar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:08:24.207+01:00  INFO 91125 --- [mooncalendar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:08:24.238+01:00  INFO 91125 --- [mooncalendar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:08:24.557+01:00  INFO 91125 --- [mooncalendar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:08:24.580+01:00  INFO 91125 --- [mooncalendar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:08:24.773+01:00  WARN 91125 --- [mooncalendar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:08:24.930+01:00  INFO 91125 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Started MooncalendarApplicationTests in 1.742 seconds (process running for 2.05)
+2026-03-15T00:08:24.930+01:00  WARN 91125 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:08:24.931+01:00  WARN 91125 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:08:25.184+01:00  INFO 91125 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:08:25.184+01:00  INFO 91125 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:08:25.188+01:00  INFO 91125 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:08:28.486+01:00  INFO 91152 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Starting MooncalendarApplication using Java 21.0.8 with PID 91152 (/Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar/target/classes started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:08:28.487+01:00  INFO 91152 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:08:28.499+01:00  INFO 91152 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-15T00:08:28.499+01:00  INFO 91152 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-15T00:08:28.722+01:00  INFO 91152 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:08:28.741+01:00  INFO 91152 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:08:28.895+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-15T00:08:28.900+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T00:08:28.900+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-15T00:08:28.912+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T00:08:28.912+01:00  INFO 91152 --- [mooncalendar] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 413 ms
+2026-03-15T00:08:28.992+01:00  INFO 91152 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:08:29.062+01:00  INFO 91152 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6092e181
+2026-03-15T00:08:29.063+01:00  INFO 91152 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:08:29.078+01:00  INFO 91152 --- [mooncalendar] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:08:29.329+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.008s)
+2026-03-15T00:08:29.333+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:08:29.334+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:08:29.357+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:08:29.371+01:00  INFO 91152 --- [mooncalendar] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:08:29.380+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:08:29.456+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:08:29.484+01:00  INFO 91152 --- [mooncalendar] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:08:29.807+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:08:29.823+01:00  INFO 91152 --- [mooncalendar] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:08:29.980+01:00  WARN 91152 --- [mooncalendar] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:08:30.126+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-15T00:08:30.137+01:00  INFO 91152 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-15T00:08:30.141+01:00  INFO 91152 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Started MooncalendarApplication in 1.779 seconds (process running for 1.894)
+2026-03-15T00:08:30.142+01:00  WARN 91152 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:08:30.142+01:00  WARN 91152 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:08:33.642+01:00  INFO 91152 --- [mooncalendar] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-15T00:08:33.642+01:00  INFO 91152 --- [mooncalendar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-15T00:08:33.643+01:00  INFO 91152 --- [mooncalendar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-15T00:08:33.814+01:00  INFO 91152 --- [mooncalendar] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 54 ms
+2026-03-15T00:08:43.832+01:00 ERROR 91152 --- [mooncalendar] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.time.DateTimeException: Invalid value for MonthOfYear (valid values 1 - 12): 2010] with root cause
+
+java.time.DateTimeException: Invalid value for MonthOfYear (valid values 1 - 12): 2010
+	at java.base/java.time.temporal.ValueRange.checkValidValue(ValueRange.java:319) ~[na:na]
+	at java.base/java.time.temporal.ChronoField.checkValidValue(ChronoField.java:718) ~[na:na]
+	at java.base/java.time.YearMonth.of(YearMonth.java:229) ~[na:na]
+	at com.ifigeneia.mooncalendar.service.MonthService.buildMonthSkeleton(MonthService.java:33) ~[classes/:na]
+	at com.ifigeneia.mooncalendar.service.MonthService.getAllMonthEvents(MonthService.java:51) ~[classes/:na]
+	at com.ifigeneia.mooncalendar.web.controller.MonthController.thesearethemonths(MonthController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-03-15T00:15:03.714+01:00  INFO 91152 --- [mooncalendar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-15T00:15:03.719+01:00  INFO 91152 --- [mooncalendar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-15T00:15:03.723+01:00  INFO 91152 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:15:03.729+01:00  INFO 91152 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:15:03.732+01:00  INFO 91152 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:15:09.245+01:00  INFO 91230 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Starting MooncalendarApplicationTests using Java 21.0.8 with PID 91230 (started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:15:09.246+01:00  INFO 91230 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:15:09.499+01:00  INFO 91230 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:15:09.520+01:00  INFO 91230 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:15:09.675+01:00  INFO 91230 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:15:09.749+01:00  INFO 91230 --- [mooncalendar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@716f94c1
+2026-03-15T00:15:09.750+01:00  INFO 91230 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:15:09.767+01:00  INFO 91230 --- [mooncalendar] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:15:10.021+01:00  INFO 91230 --- [mooncalendar] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.009s)
+2026-03-15T00:15:10.027+01:00  INFO 91230 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:15:10.029+01:00  INFO 91230 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:15:10.055+01:00  INFO 91230 --- [mooncalendar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:15:10.069+01:00  INFO 91230 --- [mooncalendar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:15:10.079+01:00  INFO 91230 --- [mooncalendar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:15:10.156+01:00  INFO 91230 --- [mooncalendar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:15:10.188+01:00  INFO 91230 --- [mooncalendar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:15:10.510+01:00  INFO 91230 --- [mooncalendar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:15:10.532+01:00  INFO 91230 --- [mooncalendar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:15:10.714+01:00  WARN 91230 --- [mooncalendar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:15:10.864+01:00  INFO 91230 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Started MooncalendarApplicationTests in 1.723 seconds (process running for 2.023)
+2026-03-15T00:15:10.865+01:00  WARN 91230 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:15:10.865+01:00  WARN 91230 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:15:11.115+01:00  INFO 91230 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:15:11.116+01:00  INFO 91230 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:15:11.119+01:00  INFO 91230 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:15:14.106+01:00  INFO 91252 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Starting MooncalendarApplication using Java 21.0.8 with PID 91252 (/Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar/target/classes started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:15:14.107+01:00  INFO 91252 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:15:14.122+01:00  INFO 91252 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-15T00:15:14.122+01:00  INFO 91252 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-15T00:15:14.370+01:00  INFO 91252 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:15:14.392+01:00  INFO 91252 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:15:14.544+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-15T00:15:14.549+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T00:15:14.549+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-15T00:15:14.561+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T00:15:14.561+01:00  INFO 91252 --- [mooncalendar] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 438 ms
+2026-03-15T00:15:14.638+01:00  INFO 91252 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:15:14.704+01:00  INFO 91252 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8c176d6
+2026-03-15T00:15:14.705+01:00  INFO 91252 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:15:14.719+01:00  INFO 91252 --- [mooncalendar] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:15:14.969+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.009s)
+2026-03-15T00:15:14.975+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:15:14.976+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:15:15.000+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:15:15.014+01:00  INFO 91252 --- [mooncalendar] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:15:15.024+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:15:15.098+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:15:15.126+01:00  INFO 91252 --- [mooncalendar] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:15:15.415+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:15:15.432+01:00  INFO 91252 --- [mooncalendar] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:15:15.586+01:00  WARN 91252 --- [mooncalendar] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:15:15.729+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-15T00:15:15.741+01:00  INFO 91252 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-15T00:15:15.745+01:00  INFO 91252 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Started MooncalendarApplication in 1.767 seconds (process running for 1.884)
+2026-03-15T00:15:15.745+01:00  WARN 91252 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:15:15.745+01:00  WARN 91252 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:15:48.959+01:00  INFO 91252 --- [mooncalendar] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-15T00:15:48.960+01:00  INFO 91252 --- [mooncalendar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-15T00:15:48.963+01:00  INFO 91252 --- [mooncalendar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-15T00:15:49.147+01:00  INFO 91252 --- [mooncalendar] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 70 ms
+2026-03-15T00:36:19.544+01:00  INFO 91252 --- [mooncalendar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-15T00:36:19.553+01:00  INFO 91252 --- [mooncalendar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-15T00:36:19.558+01:00  INFO 91252 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:36:19.566+01:00  INFO 91252 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:36:19.577+01:00  INFO 91252 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:36:24.785+01:00  INFO 91512 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Starting MooncalendarApplicationTests using Java 21.0.8 with PID 91512 (started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:36:24.786+01:00  INFO 91512 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:36:25.024+01:00  INFO 91512 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:36:25.046+01:00  INFO 91512 --- [mooncalendar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:36:25.199+01:00  INFO 91512 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:36:25.272+01:00  INFO 91512 --- [mooncalendar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dada335
+2026-03-15T00:36:25.273+01:00  INFO 91512 --- [mooncalendar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:36:25.291+01:00  INFO 91512 --- [mooncalendar] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:36:25.546+01:00  INFO 91512 --- [mooncalendar] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2026-03-15T00:36:25.552+01:00  INFO 91512 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:36:25.554+01:00  INFO 91512 --- [mooncalendar] [main] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:36:25.579+01:00  INFO 91512 --- [mooncalendar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:36:25.593+01:00  INFO 91512 --- [mooncalendar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:36:25.603+01:00  INFO 91512 --- [mooncalendar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:36:25.677+01:00  INFO 91512 --- [mooncalendar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:36:25.706+01:00  INFO 91512 --- [mooncalendar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:36:26.032+01:00  INFO 91512 --- [mooncalendar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:36:26.054+01:00  INFO 91512 --- [mooncalendar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:36:26.254+01:00  WARN 91512 --- [mooncalendar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:36:26.399+01:00  INFO 91512 --- [mooncalendar] [main] c.i.m.MooncalendarApplicationTests       : Started MooncalendarApplicationTests in 1.719 seconds (process running for 2.021)
+2026-03-15T00:36:26.400+01:00  WARN 91512 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:36:26.400+01:00  WARN 91512 --- [mooncalendar] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:36:26.652+01:00  INFO 91512 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:36:26.653+01:00  INFO 91512 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:36:26.657+01:00  INFO 91512 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-15T00:36:29.518+01:00  INFO 91532 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Starting MooncalendarApplication using Java 21.0.8 with PID 91532 (/Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar/target/classes started by ifigeniapoulka in /Users/ifigeniapoulka/Documents/mooncalendar/backend/mooncalendar)
+2026-03-15T00:36:29.519+01:00  INFO 91532 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T00:36:29.532+01:00  INFO 91532 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-15T00:36:29.532+01:00  INFO 91532 --- [mooncalendar] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-15T00:36:29.843+01:00  INFO 91532 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T00:36:29.863+01:00  INFO 91532 --- [mooncalendar] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2026-03-15T00:36:30.013+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-15T00:36:30.018+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T00:36:30.019+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-03-15T00:36:30.030+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T00:36:30.030+01:00  INFO 91532 --- [mooncalendar] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 498 ms
+2026-03-15T00:36:30.098+01:00  INFO 91532 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T00:36:30.163+01:00  INFO 91532 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@504efa1a
+2026-03-15T00:36:30.163+01:00  INFO 91532 --- [mooncalendar] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T00:36:30.178+01:00  INFO 91532 --- [mooncalendar] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/mooncalendar_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC (MySQL 8.0)
+2026-03-15T00:36:30.426+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.008s)
+2026-03-15T00:36:30.432+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `mooncalendar_db`: 1
+2026-03-15T00:36:30.433+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `mooncalendar_db` is up to date. No migration necessary.
+2026-03-15T00:36:30.456+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T00:36:30.470+01:00  INFO 91532 --- [mooncalendar] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-03-15T00:36:30.479+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T00:36:30.554+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T00:36:30.580+01:00  INFO 91532 --- [mooncalendar] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15T00:36:30.908+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T00:36:30.928+01:00  INFO 91532 --- [mooncalendar] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:36:31.093+01:00  WARN 91532 --- [mooncalendar] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T00:36:31.230+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-15T00:36:31.241+01:00  INFO 91532 --- [mooncalendar] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-15T00:36:31.245+01:00  INFO 91532 --- [mooncalendar] [restartedMain] c.i.m.MooncalendarApplication            : Started MooncalendarApplication in 1.859 seconds (process running for 1.997)
+2026-03-15T00:36:31.246+01:00  WARN 91532 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-15T00:36:31.246+01:00  WARN 91532 --- [mooncalendar] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-15T00:41:38.590+01:00  INFO 91532 --- [mooncalendar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-15T00:41:38.597+01:00  INFO 91532 --- [mooncalendar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-03-15T00:41:38.601+01:00  INFO 91532 --- [mooncalendar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T00:41:38.606+01:00  INFO 91532 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-15T00:41:38.613+01:00  INFO 91532 --- [mooncalendar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

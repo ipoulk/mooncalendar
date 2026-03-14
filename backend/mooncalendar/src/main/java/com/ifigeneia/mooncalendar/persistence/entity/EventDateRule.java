@@ -1,8 +1,6 @@
 package com.ifigeneia.mooncalendar.persistence.entity;
 
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -186,7 +184,7 @@ public class EventDateRule {
     }
 
     public Integer getStartOffsetDays(){
-        return startOffsetDays:
+        return startOffsetDays;
     }
 
     public void setStartOffsetDays (Integer startOffsetDays){
@@ -194,7 +192,7 @@ public class EventDateRule {
     }
 
     public Integer getEndOffsetDays(){
-        return startOffsetDays;
+        return endOffsetDays;
     }
 
     public void setEndOffsetDays(Integer endOffsetDays){
@@ -220,7 +218,7 @@ public class EventDateRule {
         return comment;
     }
 
-    public void setComment(String description){
+    public void setComment(String comment){
         this.comment = comment;
     }
 

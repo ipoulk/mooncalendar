@@ -12,11 +12,13 @@ public class MonthEventsProvider {
 
     private final FixedDayRuleService fixedDay;
     private final FixedRangeRuleService fixedRange;
+    private final AlgorithmRuleService algorithmRule;
     @Autowired
-    public MonthEventsProvider(FixedDayRuleService fixedDay,FixedRangeRuleService fixedRange){
+    public MonthEventsProvider(FixedDayRuleService fixedDay,FixedRangeRuleService fixedRange, AlgorithmRuleService algorithmRule){
 
         this.fixedDay=fixedDay;
         this.fixedRange=fixedRange;
+        this.algorithmRule = algorithmRule;
     }
 
 
@@ -24,18 +26,31 @@ public class MonthEventsProvider {
         Map<Integer, List<String>> aggregateResults = new TreeMap<>();
         Map<Integer, List<String>> fixedDayEvents = fixedDay.getFixedDayEvents(year,month);
         Map<Integer, List<String>> fixedRangeEvents = fixedRange.getFixedRangeEvents(year,month);
+        Map<Integer, List<String>> algorithmRuleEvents = algorithmRule.getRelativeAlgorithmEvents(year,month);
 
         for (Integer i : fixedDayEvents.keySet()){
-            if (!(fixedRangeEvents.containsKey(i))){
+            if (!(fixedRangeEvents.containsKey(i)) ){
                 fixedRangeEvents.put(i,fixedDayEvents.get(i));
-            } else {
 
+            } else {
                 List<String> l=fixedDayEvents.get(i);
                 for(String s : l){
                     fixedRangeEvents.get(i).add(s);
                 }
             }
         }
+        for (Integer i : algorithmRuleEvents.keySet()){
+            if (!(fixedRangeEvents.containsKey(i)) ){
+                fixedRangeEvents.put(i,algorithmRuleEvents.get(i));
+
+            } else {
+                List<String> l=algorithmRuleEvents.get(i);
+                for(String s : l){
+                    fixedRangeEvents.get(i).add(s);
+                }
+            }
+        }
+
         aggregateResults.putAll(fixedRangeEvents);
 
         return aggregateResults;
