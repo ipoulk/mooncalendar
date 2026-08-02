@@ -6,3 +6,5 @@ docs/Παραδοχες.pdf
 docs/Γεγονοτα.drawio.png
 docs/calendar_schema copy.xlsx
 .idea
+*.log
+*.log.*
